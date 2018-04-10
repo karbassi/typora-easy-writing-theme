@@ -1,0 +1,11 @@
+@import 'easy-writing.css';
+
+:root {
+  --accent-color: #4A5459;
+  --accented-background-color: #303b41;
+  --background-color: #263238;
+  --font-color: #ecedef;
+  --header-color: #ecedef;
+  --border-color: #4A5459;
+  --link-color: #4FC3F7;
+}

@@ -1,0 +1,495 @@
+:root {
+  --accent-color: #c1cacc;
+  --accented-background-color: #fafafa;
+  --background-color: white;
+  --border-color: #e1e7e8;
+  --code-bg-color: #f8f8f8;
+  --font-color: #5b6666;
+  --header-color: #363c3c;
+  --link-color: #f0423d;
+  /* */
+  --body-font: "Tiempos", "Merriweather", "Freight Text", Palatino, Times !important;
+  --border-radius: 2px;
+  --document-horizontal-margin: 80px;
+  --document-padding-x: 10ch;
+  --font-size: 16px;
+  --h1-fontsize: 2rem;
+  --h2-fontsize: 1.5rem;
+  --h3-fontsize: 1.125rem;
+  --line-height: 1.555;
+  --main-content-margin: 0 auto;
+  --main-content-max-width: 100ch;
+  --monospace-font-size: 14px;
+  --monospace-font: "Consolas", "Menlo", "Monaco", monospace, serif;
+  --monospace-line-height: 0.9;
+  --nav-width: 200px;
+  --vertical-padding: 40px;
+}
+
+/* Narrow layout styles */
+@media (max-width: 640px) {
+  :root {
+    --document-padding-x: 4ch;
+    --h1-fontsize: 1.5rem;
+    --h2-fontsize: 1.125rem;
+  }
+}
+
+@import url('https://fonts.googleapis.com/css?family=Merriweather:400,400i,700,700i|Source+Sans+Pro:400i,700,700i&subset=latin-ext');
+
+@font-face {
+  font-family: 'Proxima Nova';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Proxima Nova Regular'), url('./easy-writing/ProximaNova.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  font-style: italic;
+  font-weight: normal;
+  src: local('Proxima Nova Italic'), url('./easy-writing/ProximaNova-Italic.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  font-style: normal;
+  font-weight: bold;
+  src: local('Proxima Nova Bold'), url('./easy-writing/ProximaNova-Bold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  font-style: italic;
+  font-weight: bold;
+  src: local('Proxima Nova Bold Italic'), url('./easy-writing/ProximaNova-BoldItalic.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Freight Text';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Freight Text Regular'), url('./easy-writing/FreightText.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Freight Text';
+  font-style: italic;
+  font-weight: normal;
+  src: local('Freight Text Italic'), url('./easy-writing/FreightText-Italic.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Freight Text';
+  font-style: normal;
+  font-weight: bold;
+  src: local('Freight Text Bold'), url('./easy-writing/FreightText-Bold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Freight Text';
+  font-style: italic;
+  font-weight: bold;
+  src: local('Freight Text Bold Italic'), url('./easy-writing/FreightText-BoldItalic.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Charter';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Charter Regular'), url('./easy-writing/Charter.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Charter';
+  font-style: italic;
+  font-weight: normal;
+  src: local('Charter Italic'), url('./easy-writing/Charter-Italic.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Charter';
+  font-style: normal;
+  font-weight: bold;
+  src: local('Charter Bold'), url('./easy-writing/Charter-Bold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Charter';
+  font-style: italic;
+  font-weight: bold;
+  src: local('Charter Bold Italic'), url('./easy-writing/Charter-BoldItalic.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Kievit';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Kievit Book'), url('./easy-writing/Kievit.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Kievit';
+  font-style: italic;
+  font-weight: normal;
+  src: local('Kievit Book Italic'), url('./easy-writing/Kievit-Italic.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Kievit';
+  font-style: normal;
+  font-weight: bold;
+  src: local('Kievit Bold'), url('./easy-writing/Kievit-Bold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Tiempos';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Tiempos Text Regular'), url('./easy-writing/TiemposText-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Tiempos';
+  font-style: italic;
+  font-weight: normal;
+  src: local('Tiempos Headline Regular Italic'), url('./easy-writing/TiemposHeadline-RegularItalic.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Tiempos';
+  font-weight: bold;
+  src: local('Tiempos Text Bold'), url('./easy-writing/TiemposText-Bold.woff') format('woff');
+}
+
+
+html {
+	font-size: var(--font-size);
+	background-color: var(--background-color);
+}
+
+
+html,
+body {
+  color: var(--font-color);
+  font-family: var(--body-font);
+  line-height: var(--line-height);
+  margin: auto;
+}
+
+body {
+  text-align: justify;
+  padding: 2em;
+  font-size: 1.3rem;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -moz-font-feature-settings: "liga" on;
+}
+
+#write {
+  max-width: 752px;
+  margin: 0 auto;
+  margin-bottom: 2em;
+  line-height: 1.53;
+}
+
+#write > h2:first-child,
+#write > h3:first-child,
+#write > h4:first-child,
+#write > p:first-child {
+  margin-top: 1.2em;
+}
+
+/* Typography
+-------------------------------------------------------- */
+body,
+p {
+  font-family: "Tiempos", "Merriweather", "Freight Text", Palatino, Times !important;
+  line-height: 1.58;
+  letter-spacing: -0.003em;
+  color: rgba(0, 0, 0, .8);
+}
+
+a,
+a:link,
+a:visited,
+a:active {
+  color: #404247;
+  text-decoration: none;
+  text-shadow: 1px 1px 0 #fff, -1px 1px 0 #fff, 2px 0 0 #fff, -2px 0 0 #fff;
+  box-shadow: inset 0 -1px 0 0 #fff, inset 0 -2px 0 0 #404247;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Tiempos", "Kievit", "Proxima Nova", "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700 !important;
+  font-style: normal;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+p {
+  margin-bottom: 1.3em;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 32px;
+  color: #404247;
+  overflow: visible;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 1.414em 0 0.5em;
+  font-weight: inherit;
+  line-height: 1.2;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 40px;
+  line-height: 48px;
+  color: #101010;
+  margin-top: 21px;
+}
+
+h1:first-child {
+  margin-top: 80px;
+}
+
+h2 {
+  font-size: 36px;
+  line-height: 40px;
+  color: #202123;
+}
+
+h2:first-child {
+  margin-top: 40px;
+}
+
+h3 {
+  font-size: 24px;
+  line-height: 32px;
+  color: #202123;
+}
+
+h4,
+h5,
+h6 {
+  font-family: "Kievit", "Proxima Nova", "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 21px;
+  line-height: 32px;
+  color: #a5a7ae;
+  font-weight: 400;
+}
+
+small,
+.font_small {
+  font-size: 0.707em;
+}
+
+p,
+.mathjax-block {
+  margin-top: 0;
+  -webkit-hypens: auto;
+  -moz-hypens: auto;
+  hyphens: auto;
+}
+
+ul {
+  list-style: none;
+  padding-left: 1.2em;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 21px;
+}
+
+ul > li:before {
+  font-size: 16.8px;
+  padding-top: 4px;
+  padding-right: 15px;
+  content: "•";
+  position: absolute;
+  display: inline-block;
+  box-sizing: border-box;
+  width: 58px;
+  margin-left: -58px;
+  text-align: right;
+}
+
+ol {
+  padding-left: 1.2em;
+}
+
+blockquote {
+  margin-left: 1em;
+  padding-left: 1em;
+  border-left: 1px solid #ddd;
+  font-style: normal;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 21px;
+}
+
+blockquote p {
+  font-style: normal;
+  margin-bottom: 0;
+}
+
+code,
+pre {
+  font-family: var(--monospace-font);
+  font-size: var(--monospace-font-size);
+  line-height: var(--monospace-line-height);
+  background-color: var(--border-color);
+  padding: 0 0.125rem;
+  border-radius: 0.25rem;
+}
+
+pre.md-fences {
+  margin-left: 1em;
+  padding-left: 1em;
+  border: 1px solid #ddd;
+  padding-bottom: 8px;
+  padding-top: 6px;
+  margin-bottom: 1.5em;
+}
+
+a {
+  color: #2484c1;
+  text-decoration: none;
+}
+
+a img {
+  border: none;
+}
+
+h1 a,
+h1 a:hover {
+  color: #333;
+  text-decoration: none;
+}
+
+hr {
+  color: #ddd;
+  height: 1px;
+  margin: 2em 0;
+  border-top: solid 1px #ddd;
+  border-bottom: none;
+  border-left: 0;
+  border-right: 0;
+}
+
+table {
+  margin-bottom: 1.333333rem;
+}
+
+table th,
+table td {
+  padding: 8px;
+  line-height: 1.333333rem;
+  vertical-align: top;
+  border-top: 1px solid #ddd;
+}
+
+table th {
+  font-weight: bold;
+}
+
+table thead th {
+  vertical-align: bottom;
+}
+
+table caption + thead tr:first-child th,
+table caption + thead tr:first-child td,
+table colgroup + thead tr:first-child th,
+table colgroup + thead tr:first-child td,
+table thead:first-child tr:first-child th,
+table thead:first-child tr:first-child td {
+  border-top: 0;
+}
+
+table tbody + tbody {
+  border-top: 2px solid #ddd;
+}
+
+.task-list {
+  padding: 0;
+}
+
+.task-list-item {
+  padding-left: 1.6rem;
+}
+
+.task-list-item input:before {
+  content: '\221A';
+  display: inline-block;
+  width: 1.33333333rem;
+  height: 1.6rem;
+  vertical-align: middle;
+  text-align: center;
+  color: #ddd;
+  background-color: #fefefe;
+}
+
+.task-list-item input:checked:before,
+.task-list-item input[checked]:before {
+  color: inherit;
+}
+
+.md-tag {
+  color: inherit;
+  font: inherit;
+}
+
+/* yaml */
+pre.md-meta-block {
+  background-color: var(--background-color);
+  padding-bottom: .5rem;
+  color: var(--accent-color);
+  border-bottom: 2px solid var(--border-color);
+}
+
+
+.md-img-error.md-image > .md-meta {
+  vertical-align: bottom;
+}
+
+#write > h5.md-focus:before {
+  top: 2px;
+}
+
+.md-toc {
+  margin-top: 40px;
+}
+
+.md-toc-content {
+  padding-bottom: 20px;
+}
+
+.outline-expander:before {
+  color: inherit;
+  font-size: 14px;
+  top: auto;
+  content: "\f0da";
+  font-family: FontAwesome;
+}
+
+.outline-expander:hover:before,
+.outline-item-open > .outline-item > .outline-expander:before {
+  content: "\f0d7";
+}
